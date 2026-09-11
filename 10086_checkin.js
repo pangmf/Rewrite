@@ -13,19 +13,19 @@
  * ║  签到 + 话费余额 + 流量余额 + 幸运转转转      ║
  * ╚══════════════════════════════════════════════╝
  *
- * [rewrite_local]
- * ^...autoLogin url script-request-header 10086_capture.js
- * ^...getUserInformation url script-request-header 10086_capture.js
- * ^...getBigNetToken url script-request-header 10086_capture.js
- * ^...getScoreQuery url script-request-header 10086_capture.js
- * ^...getRealFee url script-request-header 10086_capture.js
- * ^...getNewPlanRemainQry url script-request-header 10086_capture.js
+  [rewrite_local]
+  ^...autoLogin url script-request-header https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086_capture.js
+  ^...getUserInformation url script-request-header https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086_capture.js
+  ^...getBigNetToken url script-request-header https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086_capture.js
+  ^...getScoreQuery url script-request-header https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086_capture.js
+  ^...getRealFee url script-request-header https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086_capture.js
+  ^...getNewPlanRemainQry url script-request-header https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086_capture.js
  *
- * [task_local]
- * 0 9 * * * 10086_checkin.js, tag=中国移动签到, enabled=true
+  [task_local]
+  0 9 * * * 10086_checkin.js, tag=中国移动签到, enabled=true
  *
- * [mitm]
- * hostname = client.app.coc.10086.cn, clientaccess.10086.cn, wx.10086.cn
+  [mitm]
+  hostname = client.app.coc.10086.cn, clientaccess.10086.cn, wx.10086.cn
  */
 
 // ====================== 常量 ======================
