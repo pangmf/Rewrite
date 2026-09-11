@@ -16,12 +16,12 @@
  *   script-response-body  → 捕获响应头r-token
  *
   [rewrite_local] 配置：
-  ^https:\\/\\/client\\.app\\.coc\\.10086\\.cn\\/biz-orange\\/LN\\/uamonekeylogin\\/autoLogin url script-request-header 10086_capture.js
-  ^https:\\/\\/clientaccess\\.10086\\.cn\\/biz-orange\\/BN\\/userInformationService\\/getUserInformation url script-request-header 10086_capture.js
-  ^https:\\/\\/client\\.app\\.coc\\.10086\\.cn\\/leadeon-abilityopen-biz\\/BN\\/obtainToken\\/getBigNetToken url script-request-header 10086_capture.js
-  ^https:\\/\\/clientaccess\\.10086\\.cn\\/biz-orange\\/BN\\/scoreQueryService\\/getScoreQuery url script-request-header 10086_capture.js
-  ^https:\\/\\/clientaccess\\.10086\\.cn\\/biz-orange\\/BN\\/realFeeQuery\\/getRealFee url script-request-header 10086_capture.js
-  ^https:\\/\\/clientaccess\\.10086\\.cn\\/biz-orange\\/BH\\/newPlanRemainQry\\/getNewPlanRemainQry url script-request-header 10086_capture.js
+  ^https:\\/\\/client\\.app\\.coc\\.10086\\.cn\\/biz-orange\\/LN\\/uamonekeylogin\\/autoLogin url script-request-header https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086_capture.js
+  ^https:\\/\\/clientaccess\\.10086\\.cn\\/biz-orange\\/BN\\/userInformationService\\/getUserInformation url script-request-header https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086_capture.js
+  ^https:\\/\\/client\\.app\\.coc\\.10086\\.cn\\/leadeon-abilityopen-biz\\/BN\\/obtainToken\\/getBigNetToken url script-request-header https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086_capture.js
+  ^https:\\/\\/clientaccess\\.10086\\.cn\\/biz-orange\\/BN\\/scoreQueryService\\/getScoreQuery url script-request-header https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086_capture.js
+  ^https:\\/\\/clientaccess\\.10086\\.cn\\/biz-orange\\/BN\\/realFeeQuery\\/getRealFee url script-request-header https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086_capture.js
+  ^https:\\/\\/clientaccess\\.10086\\.cn\\/biz-orange\\/BH\\/newPlanRemainQry\\/getNewPlanRemainQry url script-request-header https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086_capture.js
  *
   [mitm]
   hostname = client.app.coc.10086.cn, clientaccess.10086.cn, wx.10086.cn
