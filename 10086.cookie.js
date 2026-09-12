@@ -1,5 +1,5 @@
-[MITM]
-wx.10086.cn
+[mitm]
+hostname = client.app.coc.10086.cn, clientaccess.10086.cn, wx.10086.cn
 
 [rewrite_local]
 # 注意获取Cookie有两条脚本
