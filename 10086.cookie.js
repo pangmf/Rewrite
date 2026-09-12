@@ -3,11 +3,11 @@ wx.10086.cn
 
 [rewrite_local]
 # 注意获取Cookie有两条脚本
-^http:\/\/wx.10086.cn\/website\/taskCenter\/index\? url script-request-header 10086.cookie.js
-^http:\/\/wx.10086.cn\/website\/taskCenter\/sign\? url script-request-header 10086.cookie.js
+^http:\/\/wx.10086.cn\/website\/taskCenter\/index\? url script-request-header https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086.cookie.js、
+^http:\/\/wx.10086.cn\/website\/taskCenter\/sign\? url script-request-header https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086.cookie.js
 
 [task_local]
-1 0 * * * 10086.js
+1 0 * * * https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086.js
 
 
 
