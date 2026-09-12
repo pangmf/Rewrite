@@ -17,7 +17,7 @@
  *
 [rewrite_local]
 ; 统一捕获：一个脚本同时捕获 Cookie + x-token + 加密请求体 + 话费/流量API
-^https:\\/\\/client\\.app\\.coc\\.10086\\.cn\\/biz-orange\\/LN\\/uamonekeylogin\\/autoLogin url script-request-header 1https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086_capture.js
+^https:\\/\\/client\\.app\\.coc\\.10086\\.cn\\/biz-orange\\/LN\\/uamonekeylogin\\/autoLogin url script-request-header https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086_capture.js
 ^https:\\/\\/clientaccess\\.10086\\.cn\\/biz-orange\\/BN\\/userInformationService\\/getUserInformation url script-request-header https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086_capture.js
 ^https:\\/\\/client\\.app\\.coc\\.10086\\.cn\\/leadeon-abilityopen-biz\\/BN\\/obtainToken\\/getBigNetToken url script-request-header https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086_capture.js
 ^https:\\/\\/clientaccess\\.10086\\.cn\\/biz-orange\\/BN\\/scoreQueryService\\/getScoreQuery url script-request-header https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086_capture.js
@@ -25,7 +25,7 @@
 ^https:\\/\\/clientaccess\\.10086\\.cn\\/biz-orange\\/BH\\/newPlanRemainQry\\/getNewPlanRemainQry url script-request-header https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086_capture.js
 
 [task_local]
-0 9 * * * 10086_checkin.js, tag=中国移动签到, enabled=true
+0 9 * * * https://raw.githubusercontent.com/pangmf/Rewrite/refs/heads/master/10086_checkin.js, tag=中国移动签到, enabled=true
 
 [mitm]
 hostname = client.app.coc.10086.cn, clientaccess.10086.cn, wx.10086.cn
